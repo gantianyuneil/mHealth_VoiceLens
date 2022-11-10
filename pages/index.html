@@ -14,17 +14,23 @@
         <h1>VoiceLens</h1>
     </body>
 
-    <!-- Form -->
-    <form> 
-        <label type="ID">ID: </label>
-        <input type="text"><br><br>
-        <!-- <input type="submit" value="Record">
-        <i class='bx bxs-circle'></i> -->
-        <input type="file" accept="audio/*" capture />
-        <br><br>
-        <input type="submit" value="Submit">
-    </form>
-    <!-- Form -->
+    <label type="ID">ID: </label>
+    <input type="text"><br><br>
+    <!-- <input type="submit" value="Record">
+    <i class='bx bxs-circle'></i> -->
+    <input type="file" accept="audio/*" capture id="recorder" />
+
+    <a id="download">Download</a>
+    <button id="stop" onclick="myFunction()">Stop
+        <script>
+            function myFunction() {
+                document.getElementById("download").innerHTML = "YOU CLICKED ME!";
+            }
+        </script>
+    </button>
+
+    <br><br>
+    <input type="submit" value="Submit">
 
     <p>Click the "Submit" button after: <br>
         1. Filled in your ID. <br>
