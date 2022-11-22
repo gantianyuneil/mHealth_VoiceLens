@@ -83,12 +83,17 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'mysql.connector.django',
         'NAME': 'mhealth_database',
+        'ENGINE': 'mysql.connector.django',
+        'HOST': '127.0.0.1',
+        'PORT': 3306,
         'USER': 'root',
         'PASSWORD': 'administrator',
-        'HOST': '127.0.0.1',
-        'PORT': '3306'
+        'OPTIONS': {
+          'autocommit': True,
+          'use_oure': True,
+          'init_command': "SET foo='bar';"
+        },
     }
 }
 
@@ -120,7 +125,7 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False
 # True may cause error msg!
 
 
