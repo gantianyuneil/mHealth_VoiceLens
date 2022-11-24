@@ -11,14 +11,19 @@
 
         <h1>Login</h1>
 
-        <label type="ID">ID: </label>
+        <label type="ID">ID: </label><br>
         <input type="text"><br><br>
 
-        <label type="password">Password: </label>
+        <label type="password">Password: </label><br>
         <input type="text"><br><br>
-
-        <button id="login" >Login</button>
-        <a href="https://www.buffalo.edu/eln/students/project-portal/host-page.host.html/content/shared/www/eln/project-portal/project-profiles/active-projects/mhealth-tool-development.detail.html">Register</a>
+        <a>New here? Register now!</a>
+        <!-- redirect to the homepage after login in -->
+        <body>
+            <form action="/index.html" method="POST">
+            <button id="login" href = "../pages/index.html">Login</button>
+            <a href="../pages/register.html">Register</a>
+            </form>
+        </body>
 
     </body>
 
