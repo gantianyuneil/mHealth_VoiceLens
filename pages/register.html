@@ -12,23 +12,77 @@
     
     <body>
         <h1>Register your account</h1>
-        <label type="firstName">First Name: </label><br>
-        <input type="text"><br><br>
 
-        <label type="lastName">Last Name: </label><br>
-        <input type="text"><br><br>
+        <!-- First Name -->
+        <label for="firstName">First Name: </label><br>
+        <input type="text">
+        <br><br><br>
 
-        <label type="gender"> Gender:</label><br>
-        <select name="gender">
-	    <option value="none"></option>
-	    <option value="male">Male</option>
-	    <option value="female">Female</option>
-        <option value="nonBinary">Non-binary</option>
-	    <option value="other">Other</option>
-        <option value="notAnswer">Prefer not to state</option>
+        <!-- Last Name -->
+        <label for="lastName">Last Name: </label><br>
+        <input type="text">
+        <br><br><br>
+
+        <!-- Gender -->
+        <label for="gender"> Gender:</label><br>
+        <select name="gender" id="gender">
+            <option value="none"></option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="nonBinary">Non-binary</option>
+            <option value="other">Other</option>
+            <option value="notAnswer">Prefer not to state</option>
         </select>
+        <br><br><br>
 
-        
+        <!-- Ethnicity/Race -->
+        <label for="race"> Ethnicity/Race:</label><br>
+        <select name="race" id="race">
+            <option value="none"></option>
+            <option value="white">White</option>
+            <option value="spanish">Hispanic/Latino</option>
+            <option value="black">Black/African</option>
+            <option value="asian">Asian</option>
+            <option value="nativeAmerican">Native American</option>
+            <option value="pacific">Pacific Islander</option>
+            <option value="other">Other race</option>
+            <option value="notAnswer">Prefer not to state</option>
+        </select>
+        <br><br><br>
+
+        <!-- Day of Birth -->
+        <form action="" method="POST">
+            <label for="birthday">Day of Birth:</label><br>
+            <input type="date" id="birthday" name="birthday">
+        </form>
+        <br><br>
+
+        <!-- First Language -->
+        <label for="firstLanguage">First Language: </label><br>
+        <select name="firstLanguage" id="firstLanguage">
+            <option value="none"></option>
+            <option value="english">English</option>
+            <option value="spanish">Spanish</option>
+            <option value="other">Other language</option>
+        </select>
+        <br><br><br>
+
+        <!-- smoke or not -->
+        <div id="smoke">
+            <label for="yes_no_smoke">Do you smoke?</label>
+          <p>
+          <input type="radio" name="yes_no">Yes</input>
+          </p>
+          <p>
+          <input type="radio" name="yes_no">No</input>
+          </p>
+        </div>
+
+        <!--  summit and redirect to homepage -->
+        <form action="/pages/index.html" method="POST">
+            <button id="" href = "../pages/index.html">Summit</button>
+        </form>
+
 
 
     </body>

@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <!-- css file reference -->
+        <link rel="stylesheet" href="../assets/css/login.css">
+    </head>
 
     <head>
 
@@ -16,12 +20,14 @@
 
         <label type="password">Password: </label><br>
         <input type="text"><br><br>
-        <a>New here? Register now!</a>
+        <a>New here? Register now!</a><br>
         <!-- redirect to the homepage after login in -->
         <body>
-            <form action="/index.html" method="POST">
-            <button id="login" href = "../pages/index.html">Login</button>
-            <a href="../pages/register.html">Register</a>
+            <form action="/pages/index.html" method="POST">
+                <button id="login" href = "../pages/index.html">Login</button>
+            </form>
+            <form action="/pages/register.html" method="POST">
+                <a href="../pages/register.html">Register</a>
             </form>
         </body>
 
