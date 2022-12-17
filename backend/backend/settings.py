@@ -100,7 +100,6 @@ DATABASES = {
 #Docker
 # $ docker run -itd --name mhealth_database -p 3306:3306 -e MYSQL_ROOT_PASSWORD=administrator mysql
 
-
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
 
