@@ -15,7 +15,7 @@ services:
       # may be changed to 3306
     expose:
       # Opens port 8080 on the container
-      -'8080'
+      - "8080"
       # where our data will be persisted
     volumes:
       - my-db: /var/lib/mysql
