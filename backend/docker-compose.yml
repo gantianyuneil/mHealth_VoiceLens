@@ -5,18 +5,22 @@ services:
   web:
     build: ./
     ports:
-      - 80:8080
+      - 8080:8080
     volumes:
       - ./:/app
+    depends_on:
+      - "db"
+    restart: always
 
   db:
     image: mysql
     restart: always
     environment:
+      MYSQL_HOST: localhost
+      MYSQL_PORT: 3306  # cannot change this port to other number
       MYSQL_DATABASE: 'mhealth_database'
-      MYSQL_PASSWORD: 'administrator'
-      # password for root access
       MYSQL_ROOT_PASSWORD: 'administrator'
+
     ports:
       - 3306:3306
 

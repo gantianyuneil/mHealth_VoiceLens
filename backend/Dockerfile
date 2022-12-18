@@ -9,7 +9,7 @@ WORKDIR /app
 #copy all files or directories to the image
 COPY . /app
 
-#install pymongo and flask into our application
+#install dependencies
 RUN pip3 install -r requirements.txt --no-cache-dir
 
 #default port 
