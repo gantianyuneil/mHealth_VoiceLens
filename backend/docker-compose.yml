@@ -1,24 +1,33 @@
-version: '3.3'
+version: '0'
 
 services:
+
+  web:
+    build: ./
+    ports:
+      - 80:8080
+    volumes:
+      - ./:/app
+
   db:
-    image: mysql:5.7
+    image: mysql
     restart: always
     environment:
       MYSQL_DATABASE: 'mhealth_database'
-      MYSQL_USER: 'root'
       MYSQL_PASSWORD: 'administrator'
       # password for root access
       MYSQL_ROOT_PASSWORD: 'administrator'
     ports:
-      - '8080:8080'
-      # may be changed to 3306
-    expose:
-      # Opens port 8080 on the container
-      - "8080"
-      # where our data will be persisted
+      - 3306:3306
+
+#    expose:
+#      # Opens port 8080 on the container
+#      - "8080"
+#      # where our data will be persisted
+
     volumes:
-      - my-db: /var/lib/mysql
+      - mysql:/data
+
 #Names our volume
 volumes:
-  my-db:
+  mysql:
