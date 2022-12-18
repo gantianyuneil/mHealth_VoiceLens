@@ -9,7 +9,8 @@ services:
     volumes:
       - ./:/app
     depends_on:
-      - "db"
+      db:
+        condition: service_healthy
     restart: always
 
   db:
@@ -24,13 +25,14 @@ services:
     ports:
       - 3306:3306
 
-#    expose:
-#      # Opens port 8080 on the container
-#      - "8080"
-#      # where our data will be persisted
-
     volumes:
       - mysql:/data
+
+    healthcheck:
+      test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
+      timeout: 10s
+      retries: 5
+
 
 #Names our volume
 volumes:
