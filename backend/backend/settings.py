@@ -54,8 +54,7 @@ ROOT_URLCONF = 'backend.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'templates']
-        ,
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -90,9 +89,9 @@ DATABASES = {
         'USER': 'root',
         'PASSWORD': 'administrator',
         'OPTIONS': {
-          'autocommit': True,
-          'use_oure': True,
-          'init_command': "SET foo='bar';"
+            'autocommit': True,
+            'use_oure': True,
+            'init_command': "SET foo='bar';"
         },
     }
 }
