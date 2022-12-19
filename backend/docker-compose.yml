@@ -1,4 +1,4 @@
-version: '0'
+version: '1'
 
 services:
 
@@ -32,7 +32,6 @@ services:
       test: [ "CMD", "mysqladmin" ,"ping", "-h", "localhost" ]
       timeout: 10s
       retries: 5
-
 
 #Names our volume
 volumes:
