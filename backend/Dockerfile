@@ -1,3 +1,6 @@
+#docker exec -it container-name sh
+#exit
+
 #build image based on python
 FROM python:3.8
 

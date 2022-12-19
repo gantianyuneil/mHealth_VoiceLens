@@ -85,7 +85,7 @@ DATABASES = {
     'default': {
         'NAME': 'mhealth_database',
         'ENGINE': 'mysql.connector.django',
-        'HOST': 'localhost',
+        'HOST': 'db',
         'PORT': 3306,
         'USER': 'root',
         'PASSWORD': 'administrator',
