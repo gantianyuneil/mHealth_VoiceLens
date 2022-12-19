@@ -6,8 +6,8 @@ services:
     build: ./
     ports:
       - 8080:8080
-    volumes:
-      - ./:/app
+#    volumes:
+#      - web
     depends_on:
       db:
         condition: service_healthy
