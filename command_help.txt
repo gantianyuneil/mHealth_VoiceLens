@@ -1,0 +1,10 @@
+Docker:
+
+1. docker ps -a
+# View all containers in docker.
+
+2. docker rm <container ID>
+# Delete specific container.
+
+3. docker exec -it backend-web-1 sh
+# run command in a container, type "exit" to exit.
