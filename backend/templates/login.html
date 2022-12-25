@@ -22,7 +22,12 @@
 
         <input type="submit" value="Login">
     </form>
-    <a href="https://www.buffalo.edu/eln/students/project-portal/host-page.host.html/content/shared/www/eln/project-portal/project-profiles/active-projects/mhealth-tool-development.detail.html">Register</a>
+    <br>
+    <p>Not sign up yet? Register below!</p>
+    <form action="/v0/register/" method="post">
+        {% csrf_token %}
+        <input type="submit" value="Register">
+    </form>
 
     </body>
 

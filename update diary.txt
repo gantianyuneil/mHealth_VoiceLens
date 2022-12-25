@@ -5,3 +5,4 @@
 2.  localhost:8080/v0/ --> index.html(homepage)
     localhost:8080/v0/login/ --> login.html (can be directed to via homepage)
     localhost:8080/v0/index/ --> httpresponse ( will be changed later)
+    localhost:8080/v0/register/ --> register.html (database hasn't involved yet)

@@ -12,7 +12,8 @@
     
     <body>
         <h1>Register your account</h1>
-
+    <form action="/v0/users/" method="post">
+        {% csrf_token %}
         <label for="username">Username</label><br>
         <input type="text">
         <br><br><br>
@@ -83,6 +84,7 @@
           <input type="radio" name="yes_no">No</input>
           </p>
         </div>
+    </form>
 
         <!--  summit and redirect to homepage -->
         <form action="/pages/index.html" method="POST">

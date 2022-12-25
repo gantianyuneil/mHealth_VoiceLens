@@ -17,7 +17,11 @@
             diagnosing their physical condition respectively, whether they
             have any specific disease.
         </p1>
-        <p><a href="http://localhost:8080/v0/login">Login/Sign up</a></p>
+        <br><br>
+        <form action="/v0/login/" method="post" >
+            {% csrf_token %}
+            <input type="submit" value="Login/Sign up">
+        </form>
     </body>
         
     

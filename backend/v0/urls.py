@@ -5,6 +5,6 @@ urlpatterns = [
 
     path('', views.toIndex_view),
     path('login/', views.toLogin_view),
-    path('index/', views.Login_view),
-
+    path('index/', views.afterLogin_view),
+    path('register/', views.toRegister_view),
 ]
