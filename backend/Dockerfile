@@ -25,10 +25,10 @@ ENTRYPOINT ["python3"]
 # # for other docker images to be started while using docker-compose. 
 # # It permits to wait for a fixed amount of seconds and/or to wait 
 # # until a TCP port is open on a target image.
-# ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.2.1/wait /wait
+ADD https://github.com/ufoscout/docker-compose-wait/releases/download/2.2.1/wait /wait
 
 # #chmod means "change mode", +x means "execute", content inside /wait will be executed. 
-# RUN chmod +x /wait
+RUN chmod +x /wait
 
 # command for running the application in container
 CMD ["manage.py", "runserver", "0.0.0.0:8080"]

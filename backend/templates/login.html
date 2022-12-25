@@ -11,15 +11,18 @@
     <body>
 
         <h1>Login</h1>
+    <form action="/v0/index/" method="post">
+        <!-- this csrf_token helps prevent attack from attackers -->
+        {% csrf_token %}
+        <label>Username: </label>
+        <input name="user"><br><br>
 
-        <label type="ID">ID: </label>
-        <input type="text"><br><br>
+        <label>Password: </label>
+        <input name="pwd"><br><br>
 
-        <label type="password">Password: </label>
-        <input type="text"><br><br>
-
-        <button id="login" >Login</button>
-        <a href="https://www.buffalo.edu/eln/students/project-portal/host-page.host.html/content/shared/www/eln/project-portal/project-profiles/active-projects/mhealth-tool-development.detail.html">Register</a>
+        <input type="submit" value="Login">
+    </form>
+    <a href="https://www.buffalo.edu/eln/students/project-portal/host-page.host.html/content/shared/www/eln/project-portal/project-profiles/active-projects/mhealth-tool-development.detail.html">Register</a>
 
     </body>
 

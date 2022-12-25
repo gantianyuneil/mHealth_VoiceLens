@@ -1,0 +1,7 @@
+# 我们可以每次update完的东西大概写一下在这里，这样另一个人pull下来的时候就知道上一个人update了什么
+
+12/25 updates by Ziqian:
+1. homepage added (brief version)
+2.  localhost:8080/v0/ --> index.html(homepage)
+    localhost:8080/v0/login/ --> login.html (can be directed to via homepage)
+    localhost:8080/v0/index/ --> httpresponse ( will be changed later)
