@@ -17,7 +17,7 @@ def toRegister_view(request):
 
 #function directs to the page after login
 def afterLogin_view(request):
-    # if "user" or "pwd" is not found, return a empty string
+    # if "user" or "pwd" is not found, return an empty string
     username = request.POST.get("user", '')
     password = request.POST.get("pwd", '')
 
