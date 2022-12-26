@@ -3,11 +3,11 @@ version: '1'
 services:
 
   web:
-    build: ./
+    build: .
     ports:
       - 8080:8080
-#    volumes:
-#      - web
+    volumes:
+      - .:/app
     depends_on:
       db:
         condition: service_healthy

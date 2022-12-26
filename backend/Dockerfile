@@ -1,6 +1,6 @@
 #Command to run terminal via docker: 
-#    docker exec -it backend-web-1 sh
-#    exit
+#   docker exec -it backend-web-1 sh
+#   exit
 
 #build image based on python
 FROM python:3.8
