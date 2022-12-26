@@ -1,12 +1,11 @@
 1. python3 manage.py createsuperuser
 # create an admin account
+
 2. python3 manage.py startapp <name>
 # create an app directory which is named <name>
 
 
-
 Docker:
-
 1. docker ps -a
 # View all containers in docker.
 
