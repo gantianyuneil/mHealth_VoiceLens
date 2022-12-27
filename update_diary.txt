@@ -1,4 +1,4 @@
-# This document records each update.
+# This doc records each update.
 
 12/25 updated by Ziqian:
 1.  homepage added (brief version)

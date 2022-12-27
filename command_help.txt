@@ -1,3 +1,5 @@
+# This doc collects useful commands.
+
 1. python3 manage.py createsuperuser
 # create an admin account
 
