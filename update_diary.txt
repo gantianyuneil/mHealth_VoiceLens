@@ -1,8 +1,15 @@
-# 我们可以每次update完的东西大概写一下在这里，这样另一个人pull下来的时候就知道上一个人update了什么
+# This document records each update.
 
 12/25 updated by Ziqian:
-1. homepage added (brief version)
+1.  homepage added (brief version)
 2.  localhost:8080/v0/ --> index.html(homepage)
     localhost:8080/v0/login/ --> login.html (can be directed to via homepage)
     localhost:8080/v0/index/ --> httpresponse ( will be changed later)
     localhost:8080/v0/register/ --> register.html (database hasn't involved yet)
+
+12/26 updated by Neil:
+1.  Docker compose updated:
+    Originally, after each code change, it was necessary to delete the old image and build a new one. Now, after correcting the path in docker-compose, it should not be necessary to rebuild the container after each change.
+    
+# To Ziqian:
+有时候我们可能会修改docker相关的文件，所以image可能会有改动，我们就要删掉原本的image然后重新build。比如这次我稍微做了点修改，下次你pull完记得删掉原本的image。这段话你看完之后也可以删了。如果未来docker相关文件有改动，也可以写在这里提醒对方。
