@@ -23,7 +23,11 @@
         <input type="submit" value="Login">
     </form>
     <p>
-        Not signed up yet? <a href="register.html">Register</a> now!
+        Not signed up yet?
+        <form action="/v0/register/" method="get" >
+            {% csrf_token %}
+            <input type="submit" value="Sign up">
+        </form>
     </p>
 
 
