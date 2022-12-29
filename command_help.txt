@@ -19,3 +19,8 @@ Docker:
 
 4. docker-compose up --build --force-recreate -d
 # recreate docker containers once codes are changed.
+
+
+Django commands:
+1.  python manage.py migrate
+# create database structure in mysql.
