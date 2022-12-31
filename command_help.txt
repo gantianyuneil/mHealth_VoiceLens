@@ -24,3 +24,6 @@ Docker:
 Django commands:
 1.  python manage.py migrate
 # create database structure in mysql.
+
+2.  python manage.py makemigrations [app name]
+# create a migration prep file base on models.py

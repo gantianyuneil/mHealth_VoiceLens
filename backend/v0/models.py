@@ -1,7 +1,8 @@
 from django.db import models
 
 # Create your models here.
-class StudentInfo(models.Model):
-    # maximum length of a username is 12
-    username = models.CharField(max_length=12)
-    pwd = models.CharField(max_length=20)
+class userInfo(models.Model):
+    # username and password length are based on UBIT standards.
+    id = models.CharField(primary_key=True, max_length=32)
+    email = models.CharField(max_length=64)
+    password = models.CharField(max_length=32)

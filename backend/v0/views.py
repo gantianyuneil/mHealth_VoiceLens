@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from .models import *
 
 # Create your views here.
 
@@ -21,10 +22,13 @@ def toUpload_view(request):
 #function directs to the page after login
 def afterLogin_view(request):
     # if "user" or "pwd" is not found, return an empty string
-    username = request.POST.get("user", '')
-    password = request.POST.get("pwd", '')
+    email_input = request.POST.get("user", '')
+    password_input = request.POST.get("pwd", '')
 
-    if username and password:
-        return HttpResponse("Login Successful!")
+    if email_input and password_input:
+        if userInfo.objects.filter(email = email_input, password = password_input).count() >= 1:
+            return HttpResponse("Login successful!")
+        else:
+            return HttpResponse("Email address or password error.")
     else:
-        return HttpResponse("Login Failed!")
+        return HttpResponse("Please enter your info.")
