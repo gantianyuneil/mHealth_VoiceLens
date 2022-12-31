@@ -15,6 +15,9 @@ def toLogin_view(request):
 def toRegister_view(request):
     return render(request, 'register.html')
 
+def toUpload_view(request):
+    return render(request, 'upload.html')
+
 #function directs to the page after login
 def afterLogin_view(request):
     # if "user" or "pwd" is not found, return an empty string

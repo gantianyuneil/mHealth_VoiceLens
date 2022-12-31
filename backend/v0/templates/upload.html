@@ -2,14 +2,15 @@
 <html lang="en">
     <head>
         <!-- css file reference -->
-        <link rel="stylesheet" href="../assets/css/index.css">
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
     </head>
 
     <head>
         <title>VoiceLens</title>
 
         <!-- =====BOX ICONS===== -->
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel='stylesheet' href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css'>
         <!-- =====BOX ICONS===== -->
 
     </head>
@@ -24,11 +25,11 @@
 
         <a id="download"></a>
             <button onclick="RecButton()" id="stop" >Rec</button>
-            <script src="../assets/js/index.js"></script>
+            <script src="{% static 'js/index.js' %}"></script>
 
         <br><br>
 
-        <script type="text/javascript" src="../assets/js/multiselect-dropdown.js"></script>
+        <script type="text/javascript" src="{% static 'js/multiselect-dropdown.js' %}"></script>
         <style class="text/css">
             select{
                 width: 30em;
