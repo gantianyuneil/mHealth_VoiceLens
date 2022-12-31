@@ -11,7 +11,8 @@
 1.  Docker compose updated:
     Originally, after each code change, it was necessary to delete the old image and build a new one. Now, after correcting the path in docker-compose, it should not be necessary to rebuild the container after each change.
 2.  Some buttons' action changed from "post" to "get".
-3.  templates folder moved to "backend/v0/templates"
+3.  Templates folder moved to "backend/v0/templates".
+4.  Added "STATIC_URL" and "STATICFILES_DIRS" in settings.py.
     
 # To Ziqian:
 有时候我们可能会修改docker相关的文件，所以image可能会有改动，我们就要删掉原本的image然后重新build。比如这次我稍微做了点修改，下次你pull完记得删掉原本的image。这段话你看完之后也可以删了。如果未来docker相关文件有改动，也可以写在这里提醒对方。

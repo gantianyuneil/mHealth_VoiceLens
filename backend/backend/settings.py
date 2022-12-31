@@ -130,6 +130,7 @@ USE_TZ = False
 # True may cause error msg!
 
 STATIC_URL = 'static/'
+
 STATICFILES_DIRS = [
     BASE_DIR / "v0/static"
 ]
