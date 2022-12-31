@@ -1,4 +1,8 @@
 # This doc collects helpful resources.
 
 1.  Docker-compose with Persistent MySQL Data (website)
-    https://tecadmin.net/docker-compose-persistent-mysql-data/
+https://tecadmin.net/docker-compose-persistent-mysql-data/
+
+2.  How to Solve Error Message No installed app with label ‘app’ when execution makemigrations in Django Application
+http://www.dark-hamster.com/web/how-to-solve-error-message-no-installed-app-with-label-app-when-execution-makemigrations-in-django-application/
+
