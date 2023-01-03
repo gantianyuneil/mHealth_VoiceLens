@@ -4,37 +4,39 @@
 <html lang="en">
     <head>
         <!-- css file reference -->
-        {% load static %}
-        <link rel="stylesheet" href="{% static 'css/register.css' %}">
-    </head>
-    <head>
+        <!-- {% load static %}
+        <link rel="stylesheet" href="{% static 'css/register.css' %}"> -->
         <title>VoiceLens register</title>
     </head>
     
     <body>
-        <h1>Register your account</h1>
-    <form action="/v0/users/" method="post">
+    <h1>Register your account</h1>
+    <form action="/v0/register/" method="post">
         {% csrf_token %}
-        <label for="username">Username</label><br>
-        <input type="text">
+        <label for="username">Username:</label><br>
+        <input type="text" name="username" >
         <br><br><br>
-        <label for="password">Password</label><br>
-        <input type="text">
+        <label for="password">Password:</label><br>
+        <input type="password" name="psw">
+        <br><br><br>
+ 
+        <!-- Email -->
+        <label for="email">Email:</label><br>
+        <input type="email" name="email" >
         <br><br><br>
         <!-- First Name -->
         <label for="firstName">First Name: </label><br>
-        <input type="text">
+        <input type="text" name="first_name">
         <br><br><br>
 
         <!-- Last Name -->
         <label for="lastName">Last Name: </label><br>
-        <input type="text">
+        <input type="text" name="last_name">
         <br><br><br>
 
         <!-- Gender -->
         <label for="gender"> Gender:</label><br>
         <select name="gender" id="gender">
-            <option value="none"></option>
             <option value="male">Male</option>
             <option value="female">Female</option>
             <option value="nonBinary">Non-binary</option>
@@ -46,7 +48,6 @@
         <!-- Ethnicity/Race -->
         <label for="race"> Ethnicity/Race:</label><br>
         <select name="race" id="race">
-            <option value="none"></option>
             <option value="white">White</option>
             <option value="spanish">Hispanic/Latino</option>
             <option value="black">Black/African</option>
@@ -59,15 +60,13 @@
         <br><br><br>
 
         <!-- Day of Birth -->
-        <form action="" method="POST">
-            <label for="birthday">Day of Birth:</label><br>
-            <input type="date" id="birthday" name="birthday">
-        </form>
-        <br><br>
+        <label for="dob">Day of Birth:</label><br>
+        <input type="date" id="dob" name="dob">
+        <br><br><br>
 
         <!-- First Language -->
-        <label for="firstLanguage">First Language: </label><br>
-        <select name="firstLanguage" id="firstLanguage">
+        <label for="first_language">First Language: </label><br>
+        <select name="first_language" id="first_language">
             <option value="none"></option>
             <option value="english">English</option>
             <option value="spanish">Spanish</option>
@@ -76,23 +75,18 @@
         <br><br><br>
 
         <!-- smoke or not -->
-        <div id="smoke">
-            <label for="yes_no_smoke">Do you smoke?</label>
-          <p>
-          <input type="radio" name="yes_no">Yes</input>
-          </p>
-          <p>
-          <input type="radio" name="yes_no">No</input>
-          </p>
+        <div class="smoke">
+            <label for="yes_no_smoke">Do you smoke?</label><br>
+            <select name="smoke" id="smoke">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
         </div>
+        <br><br>
+
+        <input type="submit" value="Submit">
+
     </form>
-
-        <!--  summit and redirect to homepage -->
-        <form action="/pages/index.html" method="POST">
-            <button id="" href = "../pages/index.html">Summit</button>
-        </form>
-
-
 
     </body>
 

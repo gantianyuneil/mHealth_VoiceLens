@@ -1,6 +1,6 @@
 # This doc records each update.
 
-12/25 updated by Ziqian:
+12/25 updated by Anton:
 1.  homepage added (brief version)
 2.  localhost:8080/v0/ --> index.html(homepage)
     localhost:8080/v0/login/ --> login.html (can be directed to via homepage)
@@ -14,5 +14,6 @@
 3.  Templates folder moved to "backend/v0/templates".
 4.  Added "STATIC_URL" and "STATICFILES_DIRS" in settings.py.
     
-# To Ziqian:
-有时候我们可能会修改docker相关的文件，所以image可能会有改动，我们就要删掉原本的image然后重新build。比如这次我稍微做了点修改，下次你pull完记得删掉原本的image。这段话你看完之后也可以删了。如果未来docker相关文件有改动，也可以写在这里提醒对方。
+1/3 updated by Anton:
+1. The functionality of register and login initially done.(Still require polishment).
+2. user can login by typing their username and password.
