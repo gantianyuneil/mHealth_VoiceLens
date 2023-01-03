@@ -26,7 +26,6 @@ def register_view(request):
         first_language = request.POST.get('first_language', '')
         smoke = request.POST.get('smoke', '')
 
-        # This User model is from Django package, not from own-built model
         user = userInfo(username=username, email=email, password=password, first_name=first_name, last_name=last_name, gender=gender, race=race, dob=dob, first_language=first_language, smoke=smoke)
         # Save user info to database
         user.save()
