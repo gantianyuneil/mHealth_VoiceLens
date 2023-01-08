@@ -18,3 +18,10 @@
 1/3 updated by Anton:
 1. The functionality of register and login initially done.(Still require polishment).
 2. user can login by typing their username and password.
+
+1/8 updated by Anton:
+1. The functionalites of register, login and logout completed. 
+2. Added some features to remind users when they login and register.
+3. Every user's username should be unique and the password is encrypted before
+   being stored in database.
+4. admin (superuser) model is not completed, will complete it later.

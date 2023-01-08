@@ -19,13 +19,20 @@
             have any specific disease.
         </p1>
         <br><br>
-        <form action="/v0/login/" method="get" >
-            <input type="submit" value="Login">
-        </form>
-        or
-        <form action="/v0/register/" method="get" >
-            <input type="submit" value="Register">
-        </form>
+        {% if user.is_authenticated %}
+        <div>
+        <p2>Hello, {{user.username}}</p2><br>
+        <a href="/v0/upload/">Upload</a><br>
+        <a href="/v0/profile/">Personal Profile</a><br>
+        <a href="/v0/logout/">Logout</a>
+        </div>
+        {% else %}
+        <div>
+        <a href="/v0/login/">Login</a>
+        <p3>or</p3>
+        <a href="/v0/register/">Register</a>
+        </div>
+        {% endif %}
     </body>
         
     

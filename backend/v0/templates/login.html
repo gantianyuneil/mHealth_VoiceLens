@@ -11,6 +11,11 @@
     <body>
 
     <h1>Login</h1>
+    <div>
+        {% for message in messages %}
+        <h2> {{message}} </h2>
+        {% endfor %}
+    </div>
     <form action="/v0/index/" method="post">
         <!-- this csrf_token helps prevent attack from attackers -->
         {% csrf_token %}
@@ -18,12 +23,12 @@
         <input name="username" size="30"><br><br>
 
         <label>Password: </label>
-        <input name="pwd"><br><br>
+        <input type="password" name="pwd"><br><br>
 
         <input type="submit" value="Login">
     </form>
     <p>
-        Not signed up yet?
+        <b1>Not signed up yet?</b1>
         <form action="/v0/register/" method="get" >
             {% csrf_token %}
             <input type="submit" value="Sign up">

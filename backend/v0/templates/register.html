@@ -4,13 +4,18 @@
 <html lang="en">
     <head>
         <!-- css file reference -->
-        <!-- {% load static %}
-        <link rel="stylesheet" href="{% static 'css/register.css' %}"> -->
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'css/register.css' %}">
         <title>VoiceLens register</title>
     </head>
     
     <body>
     <h1>Register your account</h1>
+    <div>
+        {% for message in messages %}
+        <h2> {{message}} </h2>
+        {% endfor %}
+    </div>
     <form action="/v0/register/" method="post">
         {% csrf_token %}
         <label for="username">Username:</label><br>
@@ -18,6 +23,9 @@
         <br><br><br>
         <label for="password">Password:</label><br>
         <input type="password" name="psw">
+        <br><br><br>
+        <label for="password">Confirm password:</label><br>
+        <input type="password" name="psw2">
         <br><br><br>
  
         <!-- Email -->
@@ -67,7 +75,6 @@
         <!-- First Language -->
         <label for="first_language">First Language: </label><br>
         <select name="first_language" id="first_language">
-            <option value="none"></option>
             <option value="english">English</option>
             <option value="spanish">Spanish</option>
             <option value="other">Other language</option>
@@ -88,6 +95,7 @@
 
     </form>
 
-    </body>
+    
 
+</body>
 </html>
