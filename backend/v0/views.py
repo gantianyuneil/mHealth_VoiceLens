@@ -93,7 +93,7 @@ def login_view(request):
             messages.info(request, 'Username or password do not match')
             return redirect('/v0/login/')
     else:
-        messages.info(request, "Username or password do not match")
+        messages.info(request, "Username doesn't exist")
         return redirect('/v0/login/')
 
 def logout_view(request):
