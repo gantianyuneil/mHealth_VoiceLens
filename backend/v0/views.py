@@ -87,7 +87,8 @@ def login_view(request):
                 login(request, user)
                 return redirect('/v0')
             else:
-                return redirect('/v0/register')
+                messages.info(request, 'Username or password do not match')
+                return redirect('/v0/login/')
         else:
             messages.info(request, 'Username or password do not match')
             return redirect('/v0/login/')
